@@ -34,4 +34,22 @@ let Drschema = new mongoose.Schema({
 
 let DTable = mongoose.model("Dtable", Drschema)
 
+
+let createDoctor = (name,id) => {
+  let Appo={"Sun":{"1":false,"2":false,"3":false,"4":false,"5":false},"Mon":{"1":false,"2":false,"3":false,"4":false,"5":false},"Tue":{"1":false,"2":false,"3":false,"4":false,"5":false},"Wed":{"1":false,"2":false,"3":false,"4":false,"5":false},"Thu":{"1":false,"2":false,"3":false,"4":false,"5":false}}
+  DTable.create({ Name: name, ID:id ,Appo}, (err, data) => {
+    if (err) {
+      console.log(err)
+    } else {
+      console.log(`add doctor ${name} sucess`)
+    }
+  })
+}
+
+let doCreateDoctor=()=>{
+    createDoctor('hala',1)
+    createDoctor('doha',2)
+}
+// doCreateDoctor()
+
 module.exports = { UTable ,DTable}
