@@ -20,7 +20,6 @@
   },
   "devDependencies": {
     "nodemon": "^1.19.2",
-     
     "grunt":"^1.0.1",
     
   }
