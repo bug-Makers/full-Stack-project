@@ -46,10 +46,12 @@ let createDoctor = (name,id) => {
   })
 }
 
+
 let doCreateDoctor=()=>{
     createDoctor('hala',1)
     createDoctor('doha',2)
 }
-// doCreateDoctor()
+ //doCreateDoctor()
 
-module.exports = { UTable ,DTable}
+
+module.exports = { UTable ,DTable }
