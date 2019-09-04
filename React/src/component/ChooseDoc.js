@@ -7,7 +7,8 @@ const END_POINT = 'http://localhost:9000/Doctor';
 
 export default class ChooseDoc extends Component {
     state = {
-        data: []
+        data: [],
+        key:[]
     };
 
     // getData = () => {
@@ -33,14 +34,32 @@ export default class ChooseDoc extends Component {
 
        axios.get(`${END_POINT}/booktable/${this.inputField1.value}/${this.inputField.value}`)
             .then (res => {
-                console.log('res.data')
+                // console.log('res.data')
                 console.log(res.data)
-                this.setState({data: res.data});
-            })
-    }
+                this.setState({data: res.data});})
 
+                .then( ()=>
+                 {
+                var arr =[]
+                for(let key in this.state.data){
+                    console.log(key);
+                   if (this.state.data === true){
+
+                   }else
+
+                  arr.push(key);
+        
+                  console.log(arr)
+                }
+                console.log(arr)
+                this.setState({key: arr})
+
+            })
+          
+    }
+    
     render() {
-        const { data } = this.state
+        // const { data } = this.state
         return (
             <React.Fragment>
             <form onSubmit={this.submitHandler}>
@@ -61,11 +80,28 @@ export default class ChooseDoc extends Component {
                 </div>
                 <button type='submit' className='btn btn-info'>see what you got</button>
             </form>
-                {data.length > 0 && data.map((data, i) => <User data={data} key={i} i={i} />)}
+                {/* {this.state.data.length > 0 && this.state.data.map((data, i) => <User data={data} key={i} i={i} />)} */}
+                
                 {/* { Object.keys(data).map(function(key) {
                     return <User value={key} >{data[key]}</User>
                 }) } */}
+
                 {/* {for each(const key)} */}
+                
+                {/* { Object.keys(this.state.data).map(function(keyName, keyIndex) {
+                    <User keyName={keyName} />
+                })} */}
+
+
+                {/* {Object.keys(this.state.data).map((keyName, i) => {
+                    <User keyName={keyName} i={i} />
+                })} */}
+
+
+                {/* <User key/> */}
+                {this.state.key.map((elem, i) => <User time = {elem} key={i} />)}
+
+
             </React.Fragment>
         )
     }

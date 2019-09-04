@@ -12,9 +12,5 @@ router.get("/id", (req, res) => {
     })
 })
 
-router.post('/id/book', (req, res) => {
-    
-    User.get('/Doctor/id');
-})
 
 module.exports = router;
