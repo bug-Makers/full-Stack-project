@@ -8,7 +8,7 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "react": "cd ./React && npm run-script start",
-     "build": "grunt dist",
+     "build": "react-scripts build",
  
   },
   "author": "",
@@ -20,7 +20,7 @@
   },
   "devDependencies": {
     "nodemon": "^1.19.2",
-    "grunt":"^1.0.1",
+   
     
   }
 }
