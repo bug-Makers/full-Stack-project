@@ -20,7 +20,7 @@ let Userschema = new mongoose.Schema({
   Lname:String,
   User:String,
   Pass:String,
- Appo:Array
+ Appo:Object
 })
 
 let UTable = mongoose.model("Utable", Userschema)
@@ -28,7 +28,7 @@ let UTable = mongoose.model("Utable", Userschema)
 let Drschema = new mongoose.Schema({
   Name: String,
   ID:Number,
-  Appo:Array
+  Appo:Object
 
 })
 
