@@ -12,10 +12,6 @@ router.get("/id", (req, res) => {
 })
 
 
-router.get("/id" , (req,res)=>{
-    User.addUser((xx)=>{
-        res.json("hello")
-    })
 
 router.post('/id/book', (req, res) => {
     
