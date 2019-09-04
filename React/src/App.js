@@ -12,8 +12,6 @@ class App extends Component{
    
   return (
   <>
- 
-
 <DoctorPage />
   <ChooseDoc />
 
