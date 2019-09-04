@@ -1,22 +1,29 @@
-import React, { Component } from 'react';
+import React ,{Component}from 'react';
+import LoginD from "./Components/login_doctor"
+import DoctorPage from "./Components/DoctorPage"
+const axios = require('axios');
 
-// const axios = require('axios')
+class App extends Component{
+  state={ }
 
 
-class App extends Component {
+  render(){
+   
+  return (
+  <>
+ 
+<h1>bug Makers group</h1>
+
+<DoctorPage />
 
 
-  render() {
 
-    return (
-
-<h1>bug Makers </h1>
-
-     
-    );
-  }
+    </>
+  );
+}
 }
 export default App;
 
 
 
+  

@@ -10,10 +10,9 @@ router.get("/id",(req,res)=>{
    Doctor.getAllDoctor((nn) => {
     res.send("DR")
     })
-
-   
-    
 })
+
+
 
 
 

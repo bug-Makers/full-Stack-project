@@ -20,7 +20,7 @@ let Userschema = new mongoose.Schema({
   Lname:String,
   User:String,
   Pass:String,
- Appo:Array
+ Appo:Object
 })
 
 let UTable = mongoose.model("Utable", Userschema)
@@ -28,7 +28,7 @@ let UTable = mongoose.model("Utable", Userschema)
 let Drschema = new mongoose.Schema({
   Name: String,
   ID:Number,
-  Appo:Array
+  Appo:Object
 
 })
 
@@ -46,10 +46,12 @@ let createDoctor = (name,id) => {
   })
 }
 
+
 let doCreateDoctor=()=>{
     createDoctor('hala',1)
     createDoctor('doha',2)
 }
-// doCreateDoctor()
+ //doCreateDoctor()
 
-module.exports = { UTable ,DTable}
+
+module.exports = { UTable ,DTable }
