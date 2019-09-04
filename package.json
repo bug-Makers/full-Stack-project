@@ -8,6 +8,7 @@
     "start": "node server.js",
     "server": "nodemon server.js",
     "react": "cd ./React && npm run-script start",
+   "client": "node start-client.js"
 
  
   },
