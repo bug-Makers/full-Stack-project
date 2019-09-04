@@ -10,7 +10,7 @@ app.use(cors());
 
 app.use("/User",USER);
 app.use("/Doctor",DOCTOR);
-
+app.set('PORT', process.env.PORT || 9000);
 Express only serves static assets in production
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static('client/build'));
