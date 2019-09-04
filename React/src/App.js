@@ -1,6 +1,8 @@
+
 import React ,{Component}from 'react';
 import LoginD from "./Components/login_doctor"
 import DoctorPage from "./Components/DoctorPage"
+import ChooseDoc from './component/ChooseDoc';
 const axios = require('axios');
 
 class App extends Component{
@@ -12,17 +14,16 @@ class App extends Component{
   return (
   <>
  
-<h1>bug Makers group</h1>
 
 <DoctorPage />
-
+  <ChooseDoc />
 
 
     </>
   );
 }
-}
-export default App;
+
+
 
 
 
