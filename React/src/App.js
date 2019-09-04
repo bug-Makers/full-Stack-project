@@ -1,22 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component } from 'react'
+import ChooseDoc from './component/ChooseDoc';
+// import User from './component/User';
 
-// const axios = require('axios')
-
-
-class App extends Component {
-
-
+export default class App extends Component {
   render() {
-
     return (
-
-<h1>bug Makers </h1>
-
-     
-    );
+      <React.Fragment>
+        <ChooseDoc />
+        {/* <User /> */}
+      </React.Fragment>
+    )
   }
 }
-export default App;
+
 
 
 
