@@ -25,8 +25,36 @@ let getAllDoctor = (cb) => {
       }
     })
   }
+
+  let putTime = (i,day, cb) => {
+    console.log(i);
+    console.log(day);
+    
+    db.DTable.find({}, (err, data) => {
+      if(err) {
+        console.log(err)
+      } else {
+        cb(data)
+        // db.DTable.updateOne({'Name': 'hala'}, {$set: {data: true}}, (err, data) => {
+        //   if(err) {
+        //     console.log(err)
+        //   } else {
+        //     cb (data)
+        //   }
+        // })
+      }
+    })
+    
+    // const check = `Appo.${day}.${i}`
+    // console.log(check)
+
+    
+  }
+
+
 module.exports = { 
   getAllDoctor,
-  bookTable
+  bookTable,
+  putTime
 }
 

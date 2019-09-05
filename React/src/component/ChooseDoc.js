@@ -29,6 +29,7 @@ export default class ChooseDoc extends Component {
         e.preventDefault()
         console.log(this.inputField.value)
         console.log(this.inputField1.value)
+        this.setState({day:this.inputField1.value})
         // let docName = this.inputField.value;
         // let dayName = this.inputField1.value;
 
@@ -55,8 +56,38 @@ export default class ChooseDoc extends Component {
                 this.setState({key: arr})
 
             })
-          
     }
+    
+    click = (i) => {
+        console.log(i)
+
+       axios
+        .put(`${END_POINT}/put/${i}/${this.state.day}`)
+        .then(res => {
+            console.log(res.data)
+        })
+       
+    }
+
+    // click = (e, _id) => {
+    //     // console.log(_i)
+    //     e.preventDefault()
+    //     console.log(_id);
+
+    //     axios
+    //         .put(`${END_POINT}` )
+    //         .then(res => {
+
+    //         })
+    // }
+
+    // submitHandler = (e, _id) => {
+    //     e.preventDefault();
+    //     console.log(_id)
+
+        // axios
+            // .put(`${END_POINT} + id`)
+    // }
     
     render() {
         // const { data } = this.state
@@ -99,8 +130,8 @@ export default class ChooseDoc extends Component {
 
 
                 {/* <User key/> */}
-                {this.state.key.map((elem, i) => <User time = {elem} key={i} />)}
-
+                {this.state.key.map((elem, i) => <User click={this.click}  time = {elem} key={i} i={i} />)}
+                {/* submitHandler={this.submitHandler} */}
 
             </React.Fragment>
         )
