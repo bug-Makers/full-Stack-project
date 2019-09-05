@@ -22,6 +22,14 @@ router.get('/booktable/:inputField1/:inputField', (req, res) => {
     })
 })
 
+router.put('/put/:i/:day', (req, res) => {
+    let i = req.params.i;
+    let day=req.params.day
+    Doctor.putTime(i,day,(data) => {
+        res.json(data)
+    })
+})
+
 
 
 
